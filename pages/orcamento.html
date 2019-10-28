@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <!-- Meu Css -->
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/orcamento.css">
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -28,7 +29,7 @@
                     <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="index3.html" class="nav-link">Home</a>
+                    <a href="index.html" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="#" class="nav-link">Contact</a>
@@ -225,7 +226,7 @@
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active"><a href="#">Orçamento</a></li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -249,7 +250,8 @@
                                     </div>
                                     <!-- /.card-tools -->
                                 </div>
-                                <!-- /.card-header -->
+                                <!--card-header-->
+                                <!--#region formulário-->
                                 <div class="card-body">
                                     <form id="formAdicionarAluno">
                                         <div class="row">
@@ -262,13 +264,13 @@
                                                 </div>
                                             </div>
                                             <div class="col-sm-12 col-md-2 col-lg-2">
-                                                    <labe for="idvalorPagar">Posso pagar até:</labe>
-                                                    <div class="input-group">
-                                                            <div class="input-group-prepend">
-                                                              <span class="input-group-text">R$</span>
-                                                            </div>
-                                                            <input type="number" class="form-control">
-                                                          </div>
+                                                <labe for="idvalorPagar">Posso pagar até:</labe>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">R$</span>
+                                                    </div>
+                                                    <input type="number" class="form-control">
+                                                </div>
 
 
                                             </div>
@@ -276,26 +278,28 @@
                                                 <div class="col-sm-12 col-md-4 col-lg-3">
                                                     <div class="form-group">
                                                         <labe for="nomeAluno">Material escolar</labe>
-                                                        <input id="nomeAluno" type="number" class="form-control" required>
+                                                        <input id="nomeAluno" type="number" class="form-control"
+                                                            required>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-12 col-md-4 col-lg-3">
                                                     <div class="form-group">
                                                         <labe for="nomeAluno">Quantidade</labe>
-                                                        <input id="nomeAluno" type="number" class="form-control" required>
+                                                        <input id="nomeAluno" type="number" class="form-control"
+                                                            required>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-12 col-md-2 col-lg-3">
-                                                        <labe for="idvalorPagar">Preço unitário:</labe>
-                                                        <div class="input-group">
-                                                                <div class="input-group-prepend">
-                                                                  <span class="input-group-text">R$</span>
-                                                                </div>
-                                                                <input type="number" class="form-control">
-                                                              </div>
-                                                              
-    
-    
+                                                    <labe for="idvalorPagar">Preço unitário:</labe>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text">R$</span>
+                                                        </div>
+                                                        <input type="number" class="form-control">
+                                                    </div>
+
+
+
                                                 </div>
                                                 <div class="col-sm-12 col-md-3 col-lg-3">
                                                     <div class="form-group pt-24">
@@ -303,35 +307,64 @@
                                                             onclick="adicionarAluno()">
                                                             <i class="fas fa-plus"></i> Adicionar
                                                         </button>
+                                                        
                                                     </div>
+                                                    
                                                 </div>
+                                                <span class="tab1">Lista de Materiais do Aluno:</span>
                                             </div>
+                                           
                                         </div>
+                                        
                                     </form>
+                                    
+                                    <!--#region Inicio Tabela-->
                                     <div class="row">
-                                        <div class="col-sm-12">
-                                            <div class="card-body table-responsive p-0">
-                                                <table id="listagemAlunos" class="table table-hover">
+                                            <div class="col-sm-12 col-md-3 col-lg-7">
+                                                
+                                                    
+                                            <table class="table table-sm">
                                                     <thead>
-                                                        <tr>
-                                                            <th>Aluno</th>
-                                                            <th>1Bim</th>
-                                                            <th>2Bim</th>
-                                                            <th>3Bim</th>
-                                                            <th>4Bim</th>
-                                                            <th>Total</th>
-                                                            <th>Média</th>
-                                                            <th>Situação</th>
-                                                            <th>Ações</th>
-                                                        </tr>
+                                                        
+                                                      <tr>
+                                                        
+                                                        <th scope="col">Material</th>
+                                                        <th scope="col">Quantidade</th>
+                                                        <th scope="col">Valor unitário</th>
+                                                        <th scope="col">Total</th>
+                                                      </tr>
                                                     </thead>
                                                     <tbody>
+                                                      <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>Mark</td>
+                                                        <td>Otto</td>
+                                                        <td>@mdo</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <th scope="row">2</th>
+                                                        <td>Jacob</td>
+                                                        <td>Thornton</td>
+                                                        <td>@fat</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <th scope="row">3</th>
+                                                        <td colspan="2">Larry the Bird</td>
+                                                        <td>@twitter</td>
+                                                      </tr>
                                                     </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
+                                                  </table>
+                                                
+                                                        
+                                                  </div>
+                                        <!--#endregion-->
+                                        
                                     </div>
+                                    
                                 </div>
+                                
+                                </div>
+                                <!--#endregion-->
                                 <!-- /.card-body -->
                             </div>
                         </div>
