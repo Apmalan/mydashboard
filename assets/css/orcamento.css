@@ -2,3 +2,13 @@
     padding-top: 20px;
     padding-bottom: 50px;
 }
+
+.bg-green
+{
+    background-color: #00a65a !important;
+}
+
+@media (min-width: 1200px)
+.col-lg-3 {
+    width: 25%;
+}
